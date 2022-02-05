@@ -8,13 +8,22 @@
 - [ ] 添加阿里icestark微前端框架相关内容
 ---
 ## 🤣包含项目
-- 主应用: vue-cli4配置项目
+- 主应用: vue-cli4配置的vue2项目
 - 微应用:
   - vue-cli2创建的vue2项目
-  - vite创建的vue3+ts项目
+  - vite创建的vue3项目
   - Create React App创建的react17项目
 ---  
-## 😍Nginx目录及配置
+## 😍Nginx命令及配置
+
+| 命令 | 功能 | 
+| :----: | :----: |
+| start nginx | 启动nginx |
+| nginx -s reload | 重启nginx |
+| nginx -s quit | 推出nginx |
+
+---
+
 
 | 配置项  |  描述  |
 | :----: | :----: |
@@ -50,22 +59,22 @@ server {
       try_files $uri $uri/ /father/index.html;
   }
 
-  location /father/vue-cli2 {
-      alias  html/children/vue-cli2/dist/;
-      index  index.html index.htm;
-      try_files $uri $uri/ /father/vue-cli2/index.html;
-  }
-
   location /father/react {
       alias  html/children/react/build/;
       index  index.html index.htm;
       try_files $uri $uri/ /father/react/index.html;
   }
 
-  location /father/vite-vue {
-      alias  html/children/vite/dist/;
+  location /father/vue2 {
+      alias  html/children/vue2/dist/;
       index  index.html index.htm;
-      try_files $uri $uri/ /father/vite-vue/index.html;
+      try_files $uri $uri/ /father/vue2/index.html;
+  }
+
+  location /father/vue3 {
+      alias  html/children/vue3/dist/;
+      index  index.html index.htm;
+      try_files $uri $uri/ /father/vue3/index.html;
   }
 
 

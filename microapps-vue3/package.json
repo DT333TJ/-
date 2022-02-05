@@ -5,7 +5,7 @@
   "scripts": {
     "plop": "plop",
     "dev": "vite --port=4000",
-    "build": "vue-tsc --noEmit && vite build --base=/father/vite-vue/",
+    "build": "vue-tsc --noEmit && vite build --base=/father/vue3/",
     "preview": "vite preview"
   },
   "dependencies": {

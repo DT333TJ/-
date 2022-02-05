@@ -35,10 +35,10 @@
  * 
  * @Author: DT333TJ
  * @Date: 2022-02-04 20:25:12
- * @LastEditTime: 2022-02-05 16:20:05
+ * @LastEditTime: 2022-02-05 19:38:49
  * @LastEditors: DT333TJ
  * @Description: 路由
- * @FilePath: \vite-project\src\router\index.ts
+ * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue3\src\router\index.ts
  */
 
 import {
@@ -69,7 +69,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: process.env.NODE_ENV === 'production' ? createWebHistory('/father/vite-vue/') : createWebHistory(),
+  history: process.env.NODE_ENV === 'production' ? createWebHistory('/father/vue3/') : createWebHistory(),
   routes
 })
 

@@ -1,10 +1,10 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-05 16:18:17
+ * @LastEditTime: 2022-02-05 19:40:15
  * @LastEditors: DT333TJ
  * @Description: 增加路由的base路径
- * @FilePath: \vue-cli2\src\router\index.js
+ * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\src\router\index.js
  */
 /**
  * @description 路由定义
@@ -98,7 +98,7 @@ const routers = [
 
 const router = new Router({
   mode: 'history',
-  base: process.env.NODE_ENV !== 'production' ? '' : '/father/vue-cli2',
+  base: process.env.NODE_ENV !== 'production' ? '' : '/father/vue2',
   linkActiveClass: 'router-active',
   routes: routers
 })
