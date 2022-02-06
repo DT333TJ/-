@@ -25,18 +25,22 @@
  * 
  * @Author: DT333TJ
  * @Date: 2022-02-06 10:46:40
- * @LastEditTime: 2022-02-06 11:17:24
+ * @LastEditTime: 2022-02-06 18:03:50
  * @LastEditors: DT333TJ
  * @Description: 
  * @FilePath: \qiankun-Vue2-Vue3-React17\mainApp\src\config\index.js
  */
 
-// 此时我们还没有微应用，所以 apps 为空
-const apps = []
+const apps = [
+  {
+    name: "vue2",
+    entry: "//localhost:9001/children/vue2",
+    container: "#frameContainer",
+    activeRule: "/children/vue2",
+  },
+]
 
-// 一个进度条插件
-import NProgress from "nprogress"
-import "nprogress/nprogress.css"
+
 import { registerMicroApps, start, addGlobalUncaughtErrorHandler  } from "qiankun"
 
 
@@ -48,15 +52,11 @@ import { registerMicroApps, start, addGlobalUncaughtErrorHandler  } from "qianku
 registerMicroApps(apps, {
   // qiankun 生命周期钩子 - 微应用加载前
   beforeLoad: (app) => {
-    // 加载微应用前，加载进度条
-    NProgress.start();
     console.log("before load", app.name);
     return Promise.resolve();
   },
   // qiankun 生命周期钩子 - 微应用挂载后
   afterMount: (app) => {
-    // 加载微应用前，进度条加载完成
-    NProgress.done();
     console.log("after mount", app.name);
     return Promise.resolve();
   },

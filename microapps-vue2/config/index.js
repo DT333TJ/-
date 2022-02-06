@@ -1,10 +1,10 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-02 19:28:06
+ * @LastEditTime: 2022-02-06 16:41:26
  * @LastEditors: DT333TJ
  * @Description: 
- * @FilePath: \mvr\config\index.js
+ * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\config\index.js
  */
 'use strict'
 // Template version: 1.2.7

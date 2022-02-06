@@ -2,7 +2,8 @@
  * @desc 管理员登录
  */
 <template>
-  <div class="login" :style="{'background-image': `url(${require('../../image/login_bg.jpg')})`}">
+<!-- :style="{'background-image': `url(${require('../../image/login_bg.jpg')})`}" -->
+  <div class="login">
     <div class="login-form">
       <!-- title -->
       <div class="form-title">微视频后台管理</div>
@@ -149,7 +150,7 @@ export default {
   .login
     position relative
     width 100%
-    height 100%
+    height 100vh
     background-repeat no-repeat
     background-size cover
     .login-form

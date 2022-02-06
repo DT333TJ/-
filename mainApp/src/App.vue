@@ -16,7 +16,9 @@
 
     <section class="main" ref="wrapper">
       <div>
-        <router-view v-if="$route.name"/>  
+        <transition v-if="$route.name" name="fade" mode="out-in" appear>
+          <router-view />  
+        </transition>
         <section v-else id="frameContainer">
           测试
         </section>
@@ -76,7 +78,10 @@ export default {
   }, 
   methods: {
     pushRouter(type) {
-      this.$router.push(type)
+      if (type !== 'about' && type !== 'home') {
+        type = '/children/' + type
+      }
+      this.$router.push(`/${type}`)
       console.log("type", type)
     }
   },

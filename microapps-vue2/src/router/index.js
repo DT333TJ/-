@@ -1,7 +1,7 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-05 19:40:15
+ * @LastEditTime: 2022-02-06 15:18:11
  * @LastEditors: DT333TJ
  * @Description: 增加路由的base路径
  * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\src\router\index.js
@@ -9,8 +9,8 @@
 /**
  * @description 路由定义
  */
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Vue from 'vue'
+// import Router from 'vue-router'
 
 // 登入
 import Login from 'page/login/login'
@@ -24,7 +24,7 @@ import SchoolList from 'page/organization/school-list/school-list'
 import Administrator from 'page/administrator/administrator'
 import AdministratorList from 'page/administrator/administrator-list/administrator-list'
 
-Vue.use(Router)
+// Vue.use(Router)
 
 const routers = [
   {
@@ -93,14 +93,7 @@ const routers = [
   {
     path: '*',
     redirect: '/login'
-  },
+  }
 ]
 
-const router = new Router({
-  mode: 'history',
-  base: process.env.NODE_ENV !== 'production' ? '' : '/father/vue2',
-  linkActiveClass: 'router-active',
-  routes: routers
-})
-
-export default router
+export default routers
