@@ -8,8 +8,8 @@
     <nav class="side-bar">
       <ul>
         <li class="side-bar-item" @click="pushRouter('vue2')">vue2</li>
-        <li class="side-bar-item" @click="pushRouter('vite')">vite</li>
-        <li class="side-bar-item" @click="pushRouter('react')">react</li>
+        <!-- <li class="side-bar-item" @click="pushRouter('vue3')">vue3</li>
+        <li class="side-bar-item" @click="pushRouter('react')">react</li> -->
         <li class="side-bar-item" @click="pushRouter('about')">About</li>
       </ul>
     </nav>
@@ -78,9 +78,9 @@ export default {
   }, 
   methods: {
     pushRouter(type) {
-      if (type !== 'about' && type !== 'home') {
-        type = '/children/' + type
-      }
+      // if (type !== 'about' && type !== 'home') {
+      //   type = '/children/' + type
+      // }
       this.$router.push(`/${type}`)
       console.log("type", type)
     }

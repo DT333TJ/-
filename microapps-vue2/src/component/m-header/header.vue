@@ -7,7 +7,7 @@
       <!-- logo -->
       <div class="header-logo">
         <a class="header-logo-content" @click="_logoButtonClick">
-          <img :src="require('./img/logo.png')" alt="BBC-微视频资源库">
+          <!-- <img :src="require('./img/logo.png')" alt="BBC-微视频资源库"> -->
           微视频教学资源库
         </a>
       </div>

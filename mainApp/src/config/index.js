@@ -25,19 +25,31 @@
  * 
  * @Author: DT333TJ
  * @Date: 2022-02-06 10:46:40
- * @LastEditTime: 2022-02-06 18:03:50
+ * @LastEditTime: 2022-02-06 20:45:36
  * @LastEditors: DT333TJ
  * @Description: 
- * @FilePath: \qiankun-Vue2-Vue3-React17\mainApp\src\config\index.js
+ * @FilePath: \qiankun-vue\mainApp\src\config\index.js
  */
 
 const apps = [
   {
     name: "vue2",
-    entry: "//localhost:9001/children/vue2",
+    entry: "//localhost:8080/children/vue2",
     container: "#frameContainer",
     activeRule: "/children/vue2",
   },
+  // {
+  //   name: "vue3",
+  //   entry: "//localhost:3000/children/vue3",
+  //   container: "#frameContainer",
+  //   activeRule: "/children/vue3",
+  // },
+  // {
+  //   name: "react17",
+  //   entry: "//localhost:9001/children/react17",
+  //   container: "#frameContainer",
+  //   activeRule: "/children/react17",
+  // },
 ]
 
 

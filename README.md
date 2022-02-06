@@ -1,9 +1,9 @@
 # 💖微前端测试功能代码总集:
 
-## 👍😭🤢🤢项目进度
+## 👍😭🤢项目进度
 - [x] 完成主应用和微应用的搭建
 - [x] 完成主应用和微应用nginx的配置、并能够通过localhost路径进行访问
-- [ ] 添加qiankun微前端框架相关内容
+- [x] 添加qiankun微前端框架相关内容
 - [ ] 添加京东MicroApp微前端框架相关内容
 - [ ] 添加阿里icestark微前端框架相关内容
 ---
@@ -11,8 +11,8 @@
 - 主应用: vue-cli4配置的vue2项目
 - 微应用:
   - vue-cli2创建的vue2项目
-  - vite创建的vue3项目
-  - Create React App创建的react17项目
+  <!-- - vite创建的vue3项目
+  - Create React App创建的react17项目 -->
 ---  
 ## 😍Nginx命令及配置
 
@@ -59,22 +59,10 @@ server {
       try_files $uri $uri/ /father/index.html;
   }
 
-  location /father/react {
-      alias  html/children/react/build/;
-      index  index.html index.htm;
-      try_files $uri $uri/ /father/react/index.html;
-  }
-
   location /father/vue2 {
       alias  html/children/vue2/dist/;
       index  index.html index.htm;
       try_files $uri $uri/ /father/vue2/index.html;
-  }
-
-  location /father/vue3 {
-      alias  html/children/vue3/dist/;
-      index  index.html index.htm;
-      try_files $uri $uri/ /father/vue3/index.html;
   }
 
 
