@@ -12,6 +12,8 @@
     "@better-scroll/mouse-wheel": "^2.4.2",
     "@better-scroll/scroll-bar": "^2.4.2",
     "core-js": "^3.6.5",
+    "nprogress": "^0.2.0",
+    "qiankun": "^2.6.3",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

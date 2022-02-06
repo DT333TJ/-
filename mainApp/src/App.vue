@@ -16,7 +16,10 @@
 
     <section class="main" ref="wrapper">
       <div>
-        <router-view/>  
+        <router-view v-if="$route.name"/>  
+        <section v-else id="frameContainer">
+          测试
+        </section>
       </div>
 
       <div class="custom-vertical-scrollbar" id="vertical">
@@ -48,7 +51,6 @@ export default {
             this.bs && this.bs.refresh()
           }, 30)
         }
-        console.log("触发路由", val, oldVal)
       },
      // 深度观察监听
      deep:  true,
@@ -74,6 +76,7 @@ export default {
   }, 
   methods: {
     pushRouter(type) {
+      this.$router.push(type)
       console.log("type", type)
     }
   },
