@@ -1,10 +1,10 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-06 16:41:26
+ * @LastEditTime: 2022-02-07 21:30:38
  * @LastEditors: DT333TJ
  * @Description: 
- * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\config\index.js
+ * @FilePath: \qiankun-vue\microapps-vue2\config\index.js
  */
 'use strict'
 // Template version: 1.2.7
@@ -22,7 +22,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 9001, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 9091, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,

@@ -41,28 +41,23 @@
 
 ```
 server {
-  listen       8080;
+  listen       8082;
   server_name  localhost;
 
   #charset koi8-r;
 
   #access_log  logs/host.access.log  main;
 
-  location /test {
-      alias   html/children/;
-      index  index.html index.htm;
+  location / {
+    root  html/dist/;
+    index  index.html index.htm;
+    try_files $uri $uri/ /index.html;
   }
 
-  location /father {
-      alias  html/dist/;
-      index  index.html index.htm;
-      try_files $uri $uri/ /father/index.html;
-  }
-
-  location /father/vue2 {
-      alias  html/children/vue2/dist/;
-      index  index.html index.htm;
-      try_files $uri $uri/ /father/vue2/index.html;
+  location /child/vue {
+    alias html/child/vue/dist/;
+    index  index.html index.htm;
+    try_files $uri $uri/ /child/vue/index.html;
   }
 
 

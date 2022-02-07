@@ -2,17 +2,18 @@
   <div id="app">
     <div id="nav">
       <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/vue2">Vue2</router-link> 
     </div>
 
-    <nav class="side-bar">
+    <!-- <nav class="side-bar">
       <ul>
         <li class="side-bar-item" @click="pushRouter('vue2')">vue2</li>
-        <!-- <li class="side-bar-item" @click="pushRouter('vue3')">vue3</li>
-        <li class="side-bar-item" @click="pushRouter('react')">react</li> -->
+        <li class="side-bar-item" @click="pushRouter('vue3')">vue3</li>
+        <li class="side-bar-item" @click="pushRouter('react')">react</li>
         <li class="side-bar-item" @click="pushRouter('about')">About</li>
       </ul>
-    </nav>
+    </nav> -->
 
     <section class="main" ref="wrapper">
       <div>
@@ -112,7 +113,7 @@ export default {
   box-sizing: border-box;
   height: 60px;
   line-height: 60px;
-  margin-left: 140px;
+  /* margin-left: 140px; */
   background-color: #61795c
 }
 
@@ -142,7 +143,7 @@ export default {
 }
 .main {
   position: relative;
-  margin-left: 140px;
+  /* margin-left: 140px; */
   height: calc(100vh - 60px);
   overflow: hidden;
 }

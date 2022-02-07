@@ -1,10 +1,10 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-06 18:03:01
+ * @LastEditTime: 2022-02-07 21:42:46
  * @LastEditors: DT333TJ
  * @Description: 
- * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\src\main.js
+ * @FilePath: \qiankun-vue\microapps-vue2\src\main.js
  */
 import './public-path'
 import 'babel-polyfill'
@@ -27,9 +27,9 @@ let instance = null;
 function render(props = {}) {
   const { container } = props;
   router = new VueRouter({
-    base: '/children/vue2',
+    base: window.__POWERED_BY_QIANKUN__ ? '/vue2/' : '/child/vue/',
     mode: 'history',
-    routes,
+    routes
   });
 
   instance = new Vue({
