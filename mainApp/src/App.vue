@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/home">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/vue2">Vue2</router-link> 
+      <router-link to="/vue">Vue2</router-link> 
     </div>
 
     <!-- <nav class="side-bar">

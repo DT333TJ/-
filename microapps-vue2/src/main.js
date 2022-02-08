@@ -1,7 +1,7 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-07 21:42:46
+ * @LastEditTime: 2022-02-08 21:37:31
  * @LastEditors: DT333TJ
  * @Description: 
  * @FilePath: \qiankun-vue\microapps-vue2\src\main.js
@@ -27,7 +27,7 @@ let instance = null;
 function render(props = {}) {
   const { container } = props;
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/vue2/' : '/child/vue/',
+    base: window.__POWERED_BY_QIANKUN__ ? '/vue/' : '/child/vue/',
     mode: 'history',
     routes
   });
