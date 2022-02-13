@@ -1,10 +1,10 @@
 /*
  * @Author: DT333TJ
  * @Date: 2018-03-10 07:54:42
- * @LastEditTime: 2022-02-06 15:18:11
+ * @LastEditTime: 2022-02-13 15:03:52
  * @LastEditors: DT333TJ
  * @Description: 增加路由的base路径
- * @FilePath: \qiankun-Vue2-Vue3-React17\microapps-vue2\src\router\index.js
+ * @FilePath: \qiankun-vue\microapps-vue2\src\router\index.js
  */
 /**
  * @description 路由定义

@@ -6,20 +6,12 @@
       <router-link to="/vue">Vue2</router-link> 
     </div>
 
-    <!-- <nav class="side-bar">
-      <ul>
-        <li class="side-bar-item" @click="pushRouter('vue2')">vue2</li>
-        <li class="side-bar-item" @click="pushRouter('vue3')">vue3</li>
-        <li class="side-bar-item" @click="pushRouter('react')">react</li>
-        <li class="side-bar-item" @click="pushRouter('about')">About</li>
-      </ul>
-    </nav> -->
-
     <section class="main" ref="wrapper">
       <div>
         <transition v-if="$route.name" name="fade" mode="out-in" appear>
           <router-view />  
         </transition>
+        <!-- <router-view v-if="$route.name === 'Home' || $route.name === 'About'"/>   -->
         <section v-else id="frameContainer">
           测试
         </section>
@@ -49,7 +41,8 @@ export default {
   watch: {
     $route: {
       handler:  function (val, oldVal){
-        if (val.name && oldVal.name) {
+        console.log(val, oldVal);
+        if (val.path && oldVal.path) {
           setTimeout(function () {
             this.bs && this.bs.refresh()
           }, 30)
@@ -66,6 +59,12 @@ export default {
         scrollY: true,
         scrollX: false,
         click: true,
+        bounce: {
+          top: false,
+          bottom: false,
+          left: true,
+          right: true
+        },
         mouseWheel: {
           speed: 20,
           invert: false,
@@ -75,18 +74,10 @@ export default {
           customElements: [vertical]
         }
       })
-    }, 30)
+    }, 100)
   }, 
-  methods: {
-    pushRouter(type) {
-      // if (type !== 'about' && type !== 'home') {
-      //   type = '/children/' + type
-      // }
-      this.$router.push(`/${type}`)
-      console.log("type", type)
-    }
-  },
   destroyed() {
+    this.bs.destroy()
     this.bs = null
   }
 }

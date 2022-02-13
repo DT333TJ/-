@@ -25,20 +25,23 @@
  * 
  * @Author: DT333TJ
  * @Date: 2022-02-06 10:46:40
- * @LastEditTime: 2022-02-08 21:36:11
+ * @LastEditTime: 2022-02-13 11:42:53
  * @LastEditors: DT333TJ
  * @Description: 
  * @FilePath: \qiankun-vue\mainApp\src\config\index.js
  */
 
-const entryBase = process.env.NODE_ENV === 'development' ? '//localhost:9091' : '//localhost:8082'
+const entryBase = process.env.NODE_ENV === 'development' ? '//localhost:9091' : '//localhost:9082'
 
 const apps = [
   {
     name: "vue",
     entry: `${entryBase}` + '/child/vue/',
     container: "#frameContainer",
-    activeRule: "/vue",
+    activeRule: location => {
+      return location.pathname.includes('vue')
+    },
+    
   }
 ]
 
