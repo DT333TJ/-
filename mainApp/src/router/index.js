@@ -17,7 +17,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
   },
   {
-    path: '/about',
+    path: '/about/*',
     name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -28,7 +28,6 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: '/star/yc/',
   routes
 })
 

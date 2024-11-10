@@ -2,19 +2,19 @@
   <div id="app">
     <div id="nav">
       <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/vue">Vue2</router-link> 
+      <router-link to="/about/fbm/organization/organization-list">About</router-link> |
+      <router-link to="/vue">Vue2</router-link> |
+      <!-- <router-link to="/fbm">fbm</router-link> | -->
+      <router-link to="/umi">umi</router-link> 
     </div>
 
     <section class="main" ref="wrapper">
       <div>
-        <transition v-if="$route.name" name="fade" mode="out-in" appear>
-          <router-view />  
-        </transition>
+        <router-view />  
         <!-- <router-view v-if="$route.name === 'Home' || $route.name === 'About'"/>   -->
-        <section v-else id="frameContainer">
-          测试
-        </section>
+        <section id="frameContainer"></section>
+        <!-- <section id="frameContainer1"></section> -->
+        <!-- <div id="umiContainer"></div> -->
       </div>
 
       <div class="custom-vertical-scrollbar" id="vertical">

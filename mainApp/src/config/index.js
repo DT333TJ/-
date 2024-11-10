@@ -1,52 +1,74 @@
 /*
- *                        _oo0oo_
- *                       o8888888o
- *                       88" . "88
- *                       (| -_- |)
- *                       0\  =  /0
- *                     ___/`---'\___
- *                   .' \\|     |// '.
- *                  / \\|||  :  |||// \
- *                 / _||||| -:- |||||- \
- *                |   | \\\  - /// |   |
- *                | \_|  ''\---/''  |_/ |
- *                \  .-\__  '-'  ___/-. /
- *              ___'. .'  /--.--\  `. .'___
- *           ."" '<  `.___\_<|>_/___.' >' "".
- *          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
- *          \  \ `_.   \_ __\ /__ _/   .-` /  /
- *      =====`-.____`.___ \_____/___.-`___.-'=====
- *                        `=---='
- * 
- * 
- *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * 
- *            佛祖保佑       永不宕机     永无BUG
- * 
- * @Author: DT333TJ
- * @Date: 2022-02-06 10:46:40
- * @LastEditTime: 2022-02-13 11:42:53
+*                        _oo0oo_
+*                       o8888888o
+*                       88" . "88
+*                       (| -_- |)
+*                       0\  =  /0
+*                     ___/`---'\___
+*                   .' \\|     |// '.
+*                  / \\|||  :  |||// \
+*                 / _||||| -:- |||||- \
+*                |   | \\\  - /// |   |
+*                | \_|  ''\---/''  |_/ |
+*                \  .-\__  '-'  ___/-. /
+*              ___'. .'  /--.--\  `. .'___
+*           ."" '<  `.___\_<|>_/___.' >' "".
+*          | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+*          \  \ `_.   \_ __\ /__ _/   .-` /  /
+*      =====`-.____`.___ \_____/___.-`___.-'=====
+*                        `=---='
+* 
+* 
+*      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* 
+*            佛祖保佑       永不宕机     永无BUG
+* 
+* @Author: DT333TJ
+* @Date: 2022-02-06 10:46:40
+ * @LastEditTime: 2024-11-10 21:14:12
  * @LastEditors: DT333TJ
- * @Description: 
+* @Description: 
  * @FilePath: \qiankun-vue\mainApp\src\config\index.js
- */
-
-const entryBase = process.env.NODE_ENV === 'development' ? '//localhost:9091' : '//localhost:9082'
+*/
 
 const apps = [
   {
     name: "vue",
-    entry: `${entryBase}` + '/child/vue/',
+    entry: 'http://localhost:9092/child/vue/',
     container: "#frameContainer",
     activeRule: location => {
       return location.pathname.includes('vue')
     },
-    
+  },
+  // {
+  //   name: "fbm",
+  //   entry: '//localhost:9092/fbm',
+  //   container: "#frameContainer1",
+  //   activeRule: location => {
+  //     return location.pathname.includes('fbm')
+  //   },
+
+  // },
+  {
+    name: "umi",
+    entry: 'http://localhost:8000/umi',
+    container: "#frameContainer",
+    activeRule: location => {
+      return location.pathname.includes('umi')
+    },
+  },
+  {
+    name: "fbm",
+    entry: '//localhost:9091/about/fbm',
+    container: '#umi1Container',
+    activeRule: location => {
+      return location.pathname.includes('about')
+    },
   }
 ]
 
 
-import { registerMicroApps, start, addGlobalUncaughtErrorHandler  } from "qiankun"
+import { registerMicroApps, start, addGlobalUncaughtErrorHandler } from "qiankun"
 
 
 /**
